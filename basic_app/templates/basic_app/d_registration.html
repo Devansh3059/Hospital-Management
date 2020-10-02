@@ -4,11 +4,13 @@
 {% block body_block %}
 
 <div class="jumbotron">
+<!--     if doctor is already registered -->
     {% if d_registered %}
     <h1>Thanks for registering Doctor</h1>
 
     {% else %}
 
+<!--    new registration (doctor)  -->
     <h1>Register Here</h1>
     <h3>Fill the form</h3>
     <form action="" method="post">
