@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from basic_app.forms import DoctorRegistrationForm, PatientRegistrationForm
-
 from django.views.generic import View,TemplateView,ListView, DetailView, CreateView, UpdateView, DeleteView
-# Create your views here.
 
+# Index View
 class IndexView(TemplateView):
     template_name  = 'index.html'
 
+# Doctor Registeration View
 def d_register(request):
     d_registered = False
     if request.method == 'POST':
@@ -23,6 +23,7 @@ def d_register(request):
     return render(request,'basic_app/d_registration.html',{'doctor_form':doctor_form,
                                                             'd_registered':d_registered})
 
+# Patient Registeration View
 def p_register(request):
     p_registered = False
     if request.method == 'POST':
